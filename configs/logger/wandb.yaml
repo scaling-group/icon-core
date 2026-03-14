@@ -18,6 +18,6 @@ wandb:
   log_model: False # upload lightning ckpts
   prefix: "" # a string to put at the beginning of metric keys
   # entity: "" # set to name of your wandb team
-  group: "scaling-group"
+  # group: "" # set to your wandb team/group name
   tags: []
   job_type: ""
