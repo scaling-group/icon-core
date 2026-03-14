@@ -12,6 +12,10 @@ from .vicon_utils import build_alternating_block_lowtri_mask, depatchify, patchi
 
 
 class Vicon(nn.Module):
+    """
+    Model from: VICON: Vision In-Context Operator Networks for Multi-Physics Fluid Dynamics Prediction.
+    """
+
     def __init__(
         self,
         transformer: nn.Module,

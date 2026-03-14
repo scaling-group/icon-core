@@ -12,6 +12,10 @@ from neuralop.models import FNO1d as NeuralOpFNO1d
 
 
 class FNO1D(nn.Module):
+    """
+    Model from: Fourier neural operator with learned deformations for PDEs on general geometries.
+    """
+
     def __init__(
         self,
         in_channels: int,

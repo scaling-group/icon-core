@@ -14,6 +14,12 @@ from src.models.icon import icon_utils as mu
 
 
 class ICON(nn.Module):
+    """
+    Model from:
+    - Fine-tune language models as multi-modal differential equation solvers.
+    - PDE generalization of in-context operator networks: A study on 1D scalar nonlinear conservation laws.
+    """
+
     def __init__(
         self,
         pre_projection: nn.Module,
