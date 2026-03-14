@@ -1,0 +1,42 @@
+#######################################################
+# This file belongs to the core repository.
+# If your project repository is a fork of core,
+# you are suggested to keep this file untouched in your project.
+# This helps avoid merge conflicts when syncing from core.
+#######################################################
+
+_target_: src.models.base.encoder_decoder.EncoderDecoder
+
+encoder_in_proj:
+  _target_: torch.nn.Linear
+  in_features: 2
+  out_features: ${model.encoder.layer.d_model}
+
+decoder_in_proj:
+  _target_: torch.nn.Linear
+  in_features: 1
+  out_features: ${model.decoder.layer.d_model}
+
+encoder:
+  _target_: src.models.base.transformer.TransformerEncoder
+  layer:
+    _target_: src.models.base.transformer.TransformerEncoderLayer
+    d_model: 128
+    nhead: 4
+    dim_feedforward: 512  # 128 * 4
+  num_layers: 6
+
+decoder:
+  _target_: src.models.base.transformer.TransformerDecoder
+  layer:
+    _target_: src.models.base.transformer.TransformerDecoderLayer
+    d_model: 128
+    nhead: 4
+    dim_feedforward: 512  # 128 * 4
+  num_layers: 6
+
+
+out_proj:
+  _target_: torch.nn.Linear
+  in_features: ${model.decoder.layer.d_model}
+  out_features: 1

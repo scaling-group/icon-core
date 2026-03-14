@@ -1,0 +1,20 @@
+#######################################################
+# This file belongs to the core repository.
+# If your project repository is a fork of core,
+# you are suggested to keep this file untouched in your project.
+# This helps avoid merge conflicts when syncing from core.
+#######################################################
+
+defaults:
+  - model_summary
+  # - rich_progress_bar # somehow doesn't work with model restore
+  - print_model
+  - save_ckpt
+  - save_metric
+  - save_batch_info
+  - viz
+  - _self_
+
+# you can amend configs here, for example
+# model_summary:
+#   max_depth: -1

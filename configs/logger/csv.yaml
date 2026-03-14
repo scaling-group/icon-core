@@ -1,0 +1,14 @@
+#######################################################
+# This file belongs to the core repository.
+# If your project repository is a fork of core,
+# you are suggested to keep this file untouched in your project.
+# This helps avoid merge conflicts when syncing from core.
+#######################################################
+
+# csv logger built in lightning
+
+csv:
+  _target_: lightning.pytorch.loggers.csv_logs.CSVLogger
+  save_dir: "${paths.output_dir}"
+  name: "csv/"
+  prefix: ""

@@ -1,0 +1,18 @@
+#######################################################
+# This file belongs to the core repository.
+# If your project repository is a fork of core,
+# you are suggested to keep this file untouched in your project.
+# This helps avoid merge conflicts when syncing from core.
+#######################################################
+
+save_batch_info:
+  _target_: src.callbacks.save_batch_info.SaveBatchInfo
+  dirpath: ${paths.output_dir}/batch_info
+  print_lv_local: 2
+  print_lv_log: 1
+  train_batches_local: "list(range(40))"
+  train_batches_log: "list(range(20))"
+  valid_batches_local: "list(range(10))"
+  valid_batches_log: "list(range(5))"
+  test_batches_local: "list(range(10))"
+  test_batches_log: "list(range(5))"

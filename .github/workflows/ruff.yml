@@ -1,0 +1,32 @@
+name: Ruff
+on:
+  push:
+    branches: [ "**" ]
+  pull_request:
+    branches: [ "**" ]
+    types: [opened, synchronize, reopened, edited]
+
+jobs:
+  ruff:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/ruff-action@v3
+        with:
+          version: 0.8.0
+          args: check --fix
+          # src: "./src"
+
+      - name: Check for changes
+        id: changes
+        run: |
+          git add .
+          git diff --quiet || echo "changes_detected=true" >> $GITHUB_ENV
+
+      - name: Commit fixes
+        if: env.changes_detected == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions-bot@users.noreply.github.com"
+          git commit -m "Ruff: Auto-fix unused imports"
+          git push

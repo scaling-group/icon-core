@@ -1,0 +1,25 @@
+#######################################################
+# This file belongs to the core repository.
+# If your project repository is a fork of core,
+# you are suggested to keep this file untouched in your project.
+# This helps avoid merge conflicts when syncing from core.
+#######################################################
+
+_target_: src.models.vicon.vicon.Vicon
+
+patch_resolution: 16
+patch_num_in: 8
+patch_num_out: 8
+ex_num: ${data.ex_num}
+short_num_min: 1
+dim_channel: 3
+dim_token: 256
+
+transformer:
+  _target_: src.models.base.transformer.TransformerEncoder
+  layer:
+    _target_: src.models.base.transformer.TransformerEncoderLayer
+    d_model: 256
+    nhead: 8
+    dim_feedforward: 1024
+  num_layers: 6

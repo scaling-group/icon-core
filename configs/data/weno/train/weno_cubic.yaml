@@ -1,0 +1,20 @@
+#######################################################
+# This file belongs to the core repository.
+# If your project repository is a fork of core,
+# you are suggested to keep this file untouched in your project.
+# This helps avoid merge conflicts when syncing from core.
+#######################################################
+
+name: weno_cubic
+weight: 1.0  # Sampling weight for weighted dataset mixing
+dataset:
+  _target_: src.datasets.weno.weno.WenoDataset
+  file_paths: ${paths.data_dir}/data_weno_cubic/train*.h5
+  demo_num: 5
+  base_seed: null
+
+num_workers: ${data.num_workers}
+pin_memory: ${data.pin_memory}
+batch_size_per_device: ${data.batch_size_per_device}
+enable_device_seed: ${data.train_enable_device_seed}
+base_seed: ${data.train_base_seed}

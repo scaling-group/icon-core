@@ -1,0 +1,14 @@
+#######################################################
+# This file belongs to the core repository.
+# If your project repository is a fork of core,
+# you are suggested to keep this file untouched in your project.
+# This helps avoid merge conflicts when syncing from core.
+#######################################################
+
+defaults:
+  - default
+
+# simulate DDP on CPU, useful for debugging
+accelerator: cpu
+devices: 2
+strategy: ddp_spawn

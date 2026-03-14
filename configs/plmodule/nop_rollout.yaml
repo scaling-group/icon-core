@@ -1,0 +1,9 @@
+#######################################################
+# This file belongs to the core repository.
+# If your project repository is a fork of core,
+# you are suggested to keep this file untouched in your project.
+# This helps avoid merge conflicts when syncing from core.
+#######################################################
+
+_target_: src.plmodules.nop_rollout_lit_module.NopRolloutLitModule
+_partial_: true

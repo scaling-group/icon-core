@@ -1,0 +1,18 @@
+#######################################################
+# This file belongs to the core repository.
+# If your project repository is a fork of core,
+# you are suggested to keep this file untouched in your project.
+# This helps avoid merge conflicts when syncing from core.
+#######################################################
+
+num_workers: 4
+pin_memory: true
+train_enable_device_seed: true
+valid_enable_device_seed: true
+test_enable_device_seed: true
+train_base_seed: 12
+valid_base_seed: 42
+test_base_seed: 22
+
+# Dataset sampling configuration
+sampling_mode: cycle  # Options: "cycle" (default) or "weighted"

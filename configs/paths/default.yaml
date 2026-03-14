@@ -1,0 +1,39 @@
+#######################################################
+# This file belongs to the core repository.
+# If your project repository is a fork of core,
+# you are suggested to keep this file untouched in your project.
+# This helps avoid merge conflicts when syncing from core.
+#######################################################
+
+# path to root directory
+# this requires PROJECT_ROOT environment variable to exist
+# you can replace it with "." if you want the root to be the current working directory
+root_dir: ${oc.env:PROJECT_ROOT}
+
+# path to data directory
+data_dir: ${paths.root_dir}/data/
+
+# path to logging directory
+log_dir: ${paths.root_dir}/logs/
+
+# path to output directory, created dynamically by hydra
+# path generation pattern is specified in `configs/hydra/default.yaml`
+# use it to store all files generated during the run, like ckpts and metrics
+output_dir: ${hydra:runtime.output_dir}
+
+# path to working directory
+work_dir: ${hydra:runtime.cwd}
+
+
+# path to restore ckpts,
+# first try loading restore_ckpts, which should be list.
+# If restore_ckpts is None, load all ckpts in restore_dir
+# example #1: no restore
+restore_ckpts: null
+restore_dir: null
+# example #2: load the last ckpt
+# restore_ckpts: ["${paths.restore_dir}/last.ckpt"]
+# restore_dir: ${paths.log_dir}/train/runs/2025-01-01_00-00-00/checkpoints
+# example #3: load all ckpts in restore_dir
+# restore_ckpts: null
+# restore_dir: ${paths.log_dir}/train/runs/2025-01-01_00-00-00/checkpoints

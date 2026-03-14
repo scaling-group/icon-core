@@ -1,0 +1,17 @@
+#######################################################
+# This file belongs to the core repository.
+# If your project repository is a fork of core,
+# you are suggested to keep this file untouched in your project.
+# This helps avoid merge conflicts when syncing from core.
+#######################################################
+
+rich_console_width: 200
+
+# disable python warnings if they annoy you
+ignore_warnings: False
+
+# ask user for tags if none are provided in the config
+enforce_tags: True
+
+# pretty print config tree at the start of the run using Rich library
+print_config: True

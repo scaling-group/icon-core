@@ -1,0 +1,17 @@
+#######################################################
+# This file belongs to the core repository.
+# If your project repository is a fork of core,
+# you are suggested to keep this file untouched in your project.
+# This helps avoid merge conflicts when syncing from core.
+#######################################################
+
+# https://www.tensorflow.org/tensorboard/
+
+tensorboard:
+  _target_: lightning.pytorch.loggers.tensorboard.TensorBoardLogger
+  save_dir: "${paths.output_dir}/tensorboard/"
+  name: null
+  log_graph: False
+  default_hp_metric: True
+  prefix: ""
+  # version: ""

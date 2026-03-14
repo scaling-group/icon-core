@@ -1,0 +1,12 @@
+#######################################################
+# This file belongs to the core repository.
+# If your project repository is a fork of core,
+# you are suggested to keep this file untouched in your project.
+# This helps avoid merge conflicts when syncing from core.
+#######################################################
+
+save_output:
+  _target_: src.callbacks.save_output.SaveOutput
+  dirpath: ${paths.output_dir}/output
+  valid_batches_local: "[0]"
+  test_batches_local: "[0]"

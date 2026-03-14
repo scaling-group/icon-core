@@ -1,0 +1,16 @@
+#######################################################
+# This file belongs to the core repository.
+# If your project repository is a fork of core,
+# you are suggested to keep this file untouched in your project.
+# This helps avoid merge conflicts when syncing from core.
+#######################################################
+
+defaults:
+  - default
+
+strategy: ddp
+
+accelerator: gpu
+devices: auto
+num_nodes: 1
+sync_batchnorm: True

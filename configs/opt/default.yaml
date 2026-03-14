@@ -1,0 +1,21 @@
+#######################################################
+# This file belongs to the core repository.
+# If your project repository is a fork of core,
+# you are suggested to keep this file untouched in your project.
+# This helps avoid merge conflicts when syncing from core.
+#######################################################
+
+optimizer:
+  _target_: torch.optim.AdamW
+  _partial_: True
+  lr: 1e-4
+
+scheduler:
+  _target_: src.opt.schedulers.warmup_cosine_decay_scheduler.PercentageWarmupCosineDecayScheduler
+  _partial_: True
+  max_iters: ${trainer.max_steps}
+  warmup_percent: 10
+  decay_percent: 100
+  end_lr_factor: 0.1
+
+gnorm_clip: 1.0

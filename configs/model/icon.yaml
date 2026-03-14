@@ -1,0 +1,41 @@
+#######################################################
+# This file belongs to the core repository.
+# If your project repository is a fork of core,
+# you are suggested to keep this file untouched in your project.
+# This helps avoid merge conflicts when syncing from core.
+#######################################################
+
+_target_: src.models.icon.icon.ICON
+
+# Model hyperparameters
+shot_num_min: 1
+data_mask: false
+
+# Pre-projection layer
+pre_projection:
+  _target_: torch.nn.Linear
+  in_features: 2  # dimension of input data (e.g., demo_cond_k + demo_cond_v)
+  out_features: ${model.transformer.layer.d_model}
+
+# Function positional encoding (optional, can be null)
+function_pe:
+  _target_: torch.nn.Embedding
+  num_embeddings: 100  # maximum sequence length
+  embedding_dim: ${model.transformer.layer.d_model}
+
+# Transformer configuration
+transformer:
+  _target_: src.models.base.transformer.TransformerEncoder
+  layer:
+    _target_: src.models.base.transformer.TransformerEncoderLayer
+    d_model: 256
+    nhead: 8
+    dim_feedforward: 1024
+    dropout: 0.0
+  num_layers: 6
+
+# Post-projection layer
+post_projection:
+  _target_: torch.nn.Linear
+  in_features: ${model.transformer.layer.d_model}
+  out_features: 1  # dimension of output data (e.g., demo_qoi_v)

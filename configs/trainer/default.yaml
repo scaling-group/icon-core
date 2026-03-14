@@ -1,0 +1,35 @@
+#######################################################
+# This file belongs to the core repository.
+# If your project repository is a fork of core,
+# you are suggested to keep this file untouched in your project.
+# This helps avoid merge conflicts when syncing from core.
+#######################################################
+
+_target_: lightning.pytorch.trainer.Trainer
+
+default_root_dir: ${paths.output_dir}
+
+
+# use steps to control training
+min_steps: 1
+min_epochs: 0
+max_steps: 100000
+max_epochs: -1
+
+accelerator: cpu
+devices: 1
+
+# mixed precision for extra speed-up
+precision: ${accelerate.precision}
+
+# set True to to ensure deterministic results
+# makes training slower but gives more reproducibility than just setting seeds
+deterministic: False
+
+val_check_interval: 10000
+check_val_every_n_epoch: null
+limit_val_batches: null
+
+
+gradient_clip_val: ${opt.gnorm_clip}
+profiler: simple

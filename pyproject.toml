@@ -1,0 +1,129 @@
+[project]
+name = "scaling-core"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "einops>=0.8.1",
+    "frozendict>=2.4.6",
+    "h5py>=3.13.0",
+    "hydra-colorlog>=1.2.0",
+    "hydra-core>=1.3.2",
+    "ipykernel>=6.29.5",
+    "matplotlib>=3.10.3",
+    "mlflow>=2.22.0",
+    "neuraloperator>=1.0.2",
+    "numpy>=2.2.4",
+    "optree>=0.15.0",
+    "pandas>=2.2.3",
+    "pre-commit>=4.2.0",
+    "rich>=14.0.0",
+    "rootutils>=1.0.7",
+    "seaborn>=0.13.2",
+    "tabulate>=0.9.0",
+    "transformers>=4.53.2",
+    "wandb>=0.19.11",
+    # lightning, torch, and torchvision will be handled via extra
+    # The above are for icon-core, put your project dependencies below
+]
+
+[project.optional-dependencies]
+cu118 = ["torch>=2.6.0", "torchvision>=0.21.0", "lightning>=2.5"]
+cu124 = ["torch>=2.6.0", "torchvision>=0.21.0", "lightning>=2.5"]
+cu126 = ["torch>=2.7.0", "torchvision>=0.22.0", "lightning>=2.5"]
+cu128 = ["torch>=2.7.0", "torchvision>=0.22.0", "lightning>=2.5"]
+cpu = ["torch>=2.7.0", "torchvision>=0.22.0", "lightning>=2.5"]
+
+[tool.uv]
+conflicts = [
+    [
+        { extra = "cu118" },
+        { extra = "cu124" },
+        { extra = "cu126" },
+        { extra = "cu128" },
+        { extra = "cpu" },
+    ],
+]
+
+[tool.uv.sources]
+torch = [
+    { index = "pytorch-cu118", extra = "cu118" },
+    { index = "pytorch-cu124", extra = "cu124" },
+    { index = "pytorch-cu126", extra = "cu126" },
+    { index = "pytorch-cu128", extra = "cu128" },
+    { index = "pytorch-cpu", extra = "cpu" },
+]
+torchvision = [
+    { index = "pytorch-cu118", extra = "cu118" },
+    { index = "pytorch-cu124", extra = "cu124" },
+    { index = "pytorch-cu126", extra = "cu126" },
+    { index = "pytorch-cu128", extra = "cu128" },
+    { index = "pytorch-cpu", extra = "cpu" },
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu118"
+url = "https://download.pytorch.org/whl/cu118"
+explicit = true
+
+[[tool.uv.index]]
+name = "pytorch-cu124"
+url = "https://download.pytorch.org/whl/cu124"
+explicit = true
+
+[[tool.uv.index]]
+name = "pytorch-cu126"
+url = "https://download.pytorch.org/whl/cu126"
+explicit = true
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.ruff]
+exclude = ["reference/*", "deprecated/*"]
+
+target-version = "py311"
+line-length = 120
+indent-width = 4
+
+[tool.ruff.lint.isort]
+known-third-party = ["wandb"]
+
+[tool.ruff.format]
+docstring-code-format = true
+docstring-code-line-length = 80
+quote-style = "double"
+indent-style = "space"
+line-ending = "auto"
+
+[tool.ruff.lint]
+select = [
+    # pycodestyle
+    "E",
+    # Pyflakes
+    "F",
+    # pyupgrade
+    "UP",
+    # flake8-bugbear
+    "B",
+    # flake8-simplify
+    "SIM",
+    # isort
+    "I",
+]
+ignore = [
+    # "E402", # module level import not at top of file
+    # "E501", # line too long
+    # "E741", # ambiguous variable name
+]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401", "E402"]

@@ -1,0 +1,12 @@
+#######################################################
+# This file belongs to the core repository.
+# If your project repository is a fork of core,
+# you are suggested to keep this file untouched in your project.
+# This helps avoid merge conflicts when syncing from core.
+#######################################################
+
+fp32_matmul_precision: "highest" # or high, medium
+dynamo_cache_size_limit: null
+compile: false # compile is disabled to avoid potential overhead or instability
+precision: "32" # https://lightning.ai/docs/pytorch/stable/common/trainer.html#precision
+sdpa: ["efficient", "flash", "math"] # cudnn is not stable sometimes

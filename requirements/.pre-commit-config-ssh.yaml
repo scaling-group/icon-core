@@ -1,0 +1,33 @@
+---
+repos:
+  - repo: git@github.com:pre-commit/pre-commit-hooks.git
+    rev: v4.4.0
+    hooks:
+      # list of supported hooks: https://pre-commit.com/hooks.html
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-docstring-first
+      - id: check-yaml
+      - id: debug-statements
+      - id: detect-private-key
+      - id: check-executables-have-shebangs
+      - id: check-toml
+      - id: check-case-conflict
+      - id: check-added-large-files
+        exclude: ^reference/
+
+  - repo: git@github.com:astral-sh/ruff-pre-commit.git
+    # Ruff version.
+    rev: v0.11.0
+    hooks:
+      # Run the linter.
+      - id: ruff
+        args: [ --fix ]
+      # Run the formatter.
+      - id: ruff-format
+
+  - repo: git@github.com:adrienverge/yamllint.git
+    rev: v1.37.0
+    hooks:
+      - id: yamllint
+        # args: [--strict]

@@ -1,0 +1,19 @@
+#######################################################
+# This file belongs to the core repository.
+# If your project repository is a fork of core,
+# you are suggested to keep this file untouched in your project.
+# This helps avoid merge conflicts when syncing from core.
+#######################################################
+
+defaults:
+  - ../dataloader@_here_ # load from parent folder's dataloader.yaml to here
+  - train/nop@train.dummy_nop # load config from train/nop.yaml as train.dummy_nop
+  - train/nop_large@train.dummy_nop_large # load config from train/nop_large.yaml as train.dummy_nop_large
+  - valid/nop@valid.dummy_nop
+  - valid/nop_large@valid.dummy_nop_large
+  - test/nop@test.dummy_nop
+  - test/nop_large@test.dummy_nop_large
+  - _self_
+
+data_folder: ${paths.data_dir}/dummy_nop # the placeholder for loading data
+batch_size_per_device: 8

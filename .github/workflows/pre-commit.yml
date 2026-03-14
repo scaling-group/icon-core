@@ -1,0 +1,32 @@
+name: pre-commit
+
+on:
+  push:
+    branches: [ "**" ]
+  pull_request:
+    branches: [ "**" ]
+    types: [opened, synchronize, reopened, edited]
+  workflow_run:
+    workflows: ["Ruff"]
+    types: [completed] # run after ruff workflow completes
+
+jobs:
+  pre-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install pre-commit
+        run: pip install pre-commit
+
+      - name: Install pre-commit hooks
+        run: pre-commit install --install-hooks
+
+      - name: Run pre-commit checks
+        run: pre-commit run --all-files

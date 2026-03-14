@@ -1,0 +1,17 @@
+#######################################################
+# This file belongs to the core repository.
+# If your project repository is a fork of core,
+# you are suggested to keep this file untouched in your project.
+# This helps avoid merge conflicts when syncing from core.
+#######################################################
+
+defaults:
+  - ../dataloader@_here_
+  - train/ks@train.ks
+  - valid/ks_short@valid.ks_short
+  - valid/ks_long@valid.ks_long
+  - test/ks@test.ks
+  - _self_
+
+data_folder: ${paths.data_dir}/KS_eq
+batch_size_per_device: 8
