@@ -1,0 +1,11 @@
+#######################################################
+# This file belongs to the core repository.
+# If your project repository is a fork of core,
+# you are suggested to keep this file untouched in your project.
+# This helps avoid merge conflicts when syncing from core.
+#######################################################
+
+_target_: src.models.nop.deeponet.DeepONet
+branch_layer_sizes: [128, 64, 64]  # [sensor_points, hidden, ..., output_dim]
+trunk_layer_sizes: [1, 64, 64]     # [query_dim, hidden, ..., output_dim]
+activation: relu
