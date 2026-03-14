@@ -7,6 +7,8 @@ description: Full workflow: environment setup, running experiments, reusing and 
 
 This document describes the full project workflow: environment setup, running experiments, reusing and implementing new components, and testing.
 
+> **Important:** Never commit or push directly to `main`. All changes must go through a Pull Request. See the `git` skill for details.
+
 ## Environment Setup
 
 ### uv (recommended)

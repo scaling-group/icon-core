@@ -5,6 +5,10 @@ description: Git operations: branching, commit message format, pre-commit hook h
 
 # Git Instructions
 
+## Core Rule
+
+**Never commit or push directly to `main`.** All changes must go through a Pull Request on a feature branch.
+
 ## Branching
 
 When creating a new branch off `main`, always sync local `main` with the remote first:
