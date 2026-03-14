@@ -64,18 +64,18 @@ You can create README.md in your own repository to describe your own project. We
 
 Internal contributors:
 
-<a href="https://github.com/LiuYangMage"><img src="https://github.com/LiuYangMage.png" width="50" height="50" /></a>
-<a href="https://github.com/xxxkhmmm"><img src="https://github.com/xxxkhmmm.png" width="50" height="50" /></a>
-<a href="https://github.com/LiAlH4"><img src="https://github.com/LiAlH4.png" width="50" height="50" /></a>
-<a href="https://github.com/shuowang-ai"><img src="https://github.com/shuowang-ai.png" width="50" height="50" /></a>
-<a href="https://github.com/linyanxiang26"><img src="https://github.com/linyanxiang26.png" width="50" height="50" /></a>
-<a href="https://github.com/Tarpelite"><img src="https://github.com/Tarpelite.png" width="50" height="50" /></a>
-<a href="https://github.com/zongmin-yu"><img src="https://github.com/zongmin-yu.png" width="50" height="50" /></a>
-<a href="https://github.com/NemoursWoo"><img src="https://github.com/NemoursWoo.png" width="50" height="50" /></a>
+<a href="https://github.com/LiuYangMage"><img src="https://github.com/LiuYangMage.png" width="64" height="64" style="border-radius: 50%;" /></a>
+<a href="https://github.com/xxxkhmmm"><img src="https://github.com/xxxkhmmm.png" width="64" height="64" style="border-radius: 50%;" /></a>
+<a href="https://github.com/LiAlH4"><img src="https://github.com/LiAlH4.png" width="64" height="64" style="border-radius: 50%;" /></a>
+<a href="https://github.com/shuowang-ai"><img src="https://github.com/shuowang-ai.png" width="64" height="64" style="border-radius: 50%;" /></a>
+<a href="https://github.com/linyanxiang26"><img src="https://github.com/linyanxiang26.png" width="64" height="64" style="border-radius: 50%;" /></a>
+<a href="https://github.com/Tarpelite"><img src="https://github.com/Tarpelite.png" width="64" height="64" style="border-radius: 50%;" /></a>
+<a href="https://github.com/zongmin-yu"><img src="https://github.com/zongmin-yu.png" width="64" height="64" style="border-radius: 50%;" /></a>
+<a href="https://github.com/NemoursWoo"><img src="https://github.com/NemoursWoo.png" width="64" height="64" style="border-radius: 50%;" /></a>
 
 Also contributed by the community:
 
-<a href="https://github.com/scaling-group/scaling-icon-core/graphs/contributors"><img src="https://contrib.rocks/image?repo=scaling-group/scaling-icon-core" /></a>
+<a href="https://github.com/scaling-group/icon-core/graphs/contributors"><img src="https://contrib.rocks/image?repo=scaling-group/icon-core" /></a>
 
 
 ## Acknowledgement
