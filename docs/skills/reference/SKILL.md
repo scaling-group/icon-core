@@ -1,6 +1,6 @@
 ---
 name: reference
-description: Reference code folder conventions — storing external project code for AI-assisted development context
+description: Reference code folder conventions — storing external code and documentation for AI-assisted development context
 ---
 
 # Reference Code
@@ -14,6 +14,6 @@ description: Reference code folder conventions — storing external project code
 
 ```
 - file-name.txt
-   - Source: name of external repository
+   - Source: name of external source
    - Content: brief description of what this contains
 ```
