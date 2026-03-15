@@ -34,7 +34,7 @@ Core Features:
 For more details on the repository architecture, please refer to [structure.md](structure.md).
 
 ## 🚀 Join the Community
-To build a truly accessible and versatile platform, **ICON-CORE thrives on community contributions.** Whether you are implementing a new model, sharing a specialized dataset, or optimizing core infrastructure, your input is invaluable. 
+To build a truly accessible and versatile platform, **ICON-CORE thrives on community contributions.** Whether you are implementing a new model, sharing a specialized dataset, or optimizing core infrastructure, your input is invaluable.
 
 We invite you to join us in shaping the project by opening a pull request!
 ## How to use this repository
