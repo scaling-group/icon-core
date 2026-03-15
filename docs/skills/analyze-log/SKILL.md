@@ -1,5 +1,5 @@
 ---
-name: logs-structure
+name: analyze-log
 description: Training logs directory structure for post-processing and analysis
 ---
 
