@@ -11,21 +11,18 @@
 [![PRs](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)]()
 [![contributors](https://img.shields.io/github/contributors/scaling-group/icon-core.svg)](https://github.com/scaling-group/icon-core/graphs/contributors)
 
-ICON-CORE is a project to facilitate research in scientific machine learning, <br> with a focus on [In-Context Operator Networks (ICON)](https://www.pnas.org/doi/10.1073/pnas.2310142120). 🚀⚡🔥<br>
+ICON-CORE is a project to facilitate research in scientific machine learning, <br> specializing in [In-Context Operator Networks (ICON)](https://www.pnas.org/doi/10.1073/pnas.2310142120). <br>
 Click on [<kbd>fork</kbd>](https://github.com/scaling-group/icon-core/fork) or [<kbd>use this template</kbd>](https://github.com/scaling-group/icon-core/generate) to initialize your own project.
-
-Suggestions and Pull Requests are welcome!
 
 </div>
 
-<br>
 
 ## Description
 
 **ICON-CORE** is an open-source project designed to accelerate research in Scientific Machine Learning (SciML), specializing in **In-Context Operator Networks (ICON)**. Originally developed as the internal infrastructure for the [Scientific Computing and Intelligence Group (Scaling Group)](https://scaling-group.github.io/), it is now an open platform for the community.
 
 Core Features:
-- Models and algorithms on the topic of in-context operator networks.
+- Models and algorithms on in-context operator networks.
 - Standardized datasets and dataloaders supporting seamless multi-dataset integration.
 - Streamlined workflows for training and evaluation.
 - Comprehensive utilities, including visualization, logging, and experiment management.
