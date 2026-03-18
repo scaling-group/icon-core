@@ -7,7 +7,7 @@
 [![lightning](https://img.shields.io/badge/-Lightning_2.0+-792ee5?logo=pytorchlightning&logoColor=white)](https://pytorchlightning.ai/)<br>
 [![hydra](https://img.shields.io/badge/Config-Hydra_1.3-89b8cd)](https://hydra.cc/)
 [![ruff](https://img.shields.io/badge/Code%20Style-Ruff-orange.svg?labelColor=gray)](https://docs.astral.sh/ruff/)<br>
-[![license](https://img.shields.io/badge/License-MIT-green.svg?labelColor=gray)]()
+[![license](https://img.shields.io/badge/License-Apache_2.0-blue.svg?labelColor=gray)]()
 [![PRs](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)]()
 [![contributors](https://img.shields.io/github/contributors/scaling-group/icon-core.svg)](https://github.com/scaling-group/icon-core/graphs/contributors)
 
@@ -65,30 +65,22 @@ Also to contributors before open-sourcing (may not shown in the contributors lis
 
 Please include the following acknowledgement in your code base that uses this repository.
 
-This project uses the [ICON-CORE](https://github.com/scaling-group/icon-core), which is under the MIT license.
+This project uses the [ICON-CORE](https://github.com/scaling-group/icon-core), which is under the Apache 2.0 license.
 
 ```txt
-MIT License
+Copyright 2025 Scientific Computing and Intelligence Group
 
-Copyright (c) 2025 Scientific Computing and Intelligence Group
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+    http://www.apache.org/licenses/LICENSE-2.0
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 ```
 
 ICON-CORE is based on the [lightning-hydra-template](https://github.com/ashleve/lightning-hydra-template), which is under the MIT license.
