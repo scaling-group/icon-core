@@ -14,7 +14,7 @@ description: Git operations: branching, commit message format, pre-commit hook h
 When creating a new branch off `main`, always sync local `main` with the remote first:
 
 ```sh
-git checkout main && git pull upstream main
+git checkout main && git pull origin main
 git checkout -b your-new-branch
 ```
 
