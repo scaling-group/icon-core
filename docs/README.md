@@ -40,7 +40,7 @@ There are two ways to use this repository:
 
 - [<kbd>Use this template</kbd>](https://github.com/scaling-group/icon-core/generate) to create your own repository. This is essentially copying the files you need, and the generated repository is independent of this one. Of course, you can also create your own repository from scratch and manually copy the files you need.
 
-- [<kbd>Fork this repository</kbd>](https://github.com/scaling-group/icon-core/fork) and use it as an upstream for your own project. This makes it easier to sync up with the latest features. However, the downside is that when syncing the updates, the changes may break your code, even silently changing your training results. Moreover, forking makes the git workflow more complicated, so you need to make sure you are familiar with git and GitHub.
+- [<kbd>Fork this repository</kbd>](https://github.com/scaling-group/icon-core/fork) and use it as an upstream for your own project. This makes it easier to sync up with the latest features. Note that your forked repository will be public, and when syncing the updates, the changes may break your code, even silently changing your training results.
 
 ## Contributors
 
