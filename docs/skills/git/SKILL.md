@@ -1,6 +1,6 @@
 ---
 name: git
-description: Git operations: branching, commit message format, pre-commit hook handling, and push policy
+description: "Git operations: branching, commit message format, pre-commit hook handling, and push policy"
 ---
 
 # Git Instructions

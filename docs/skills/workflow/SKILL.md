@@ -1,6 +1,6 @@
 ---
 name: workflow
-description: Full workflow: environment setup, running experiments, reusing and implementing new components (models, datasets, plmodules, callbacks), and testing
+description: "Full workflow: environment setup, running experiments, reusing and implementing new components (models, datasets, plmodules, callbacks), and testing"
 ---
 
 # Workflow
