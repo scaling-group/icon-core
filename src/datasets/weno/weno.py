@@ -6,6 +6,25 @@
 #######################################################
 
 
+"""
+This is the dataset for the conservation law data used in the following paper:
+
+@article{yang2024pde,
+  title={{PDE} generalization of in-context operator networks: A study on {1D} scalar nonlinear conservation laws},
+  author={Yang, Liu and Osher, Stanley J},
+  journal={Journal of Computational Physics},
+  volume={519},
+  pages={113379},
+  year={2024},
+  publisher={Elsevier}
+}
+
+Data generation reference:
+- https://github.com/scaling-group/icon-tutorial/tree/main/src/datagen (entry)
+- https://github.com/scaling-group/icon-tutorial/blob/main/scripts/datagen.sh (example command)
+
+"""
+
 import glob
 import os
 
